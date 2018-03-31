@@ -1,3 +1,3 @@
 # Lab 1
 
-## Working with ROOT
+### Working with ROOT
