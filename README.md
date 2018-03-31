@@ -4,7 +4,7 @@ This guide will help you though the remainder of the Nuclear physics Lab, during
 
     git clone https://github.com/tylern4/511-lab.git
 
-### ROOT
+### Build and install ROOT
 
 This is the same guide I have already provided, so if you already have ROOT installed just head on to look at the example code in the lab folders.
 
