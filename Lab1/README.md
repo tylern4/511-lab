@@ -13,9 +13,11 @@ To open root a bit faster, without waiting for the logo.
     root -l
 
 Your prompt should now look like:
+
     root [0]
 
 Here you can do simple calculations, and even create functions in c/c++ style as if you were writing a regular program:
+
     root [0] 4+4
     (int) 8
     root [1] 4.0+4
@@ -25,17 +27,21 @@ Here you can do simple calculations, and even create functions in c/c++ style as
     (double) 78.539816
 
 ROOT can even open a graphical browser to view data and graphs stored in root files:
+
     root [0] TBrowser a
 
 To exit the root interpreter just enter:
+
     root [0] .q
 
 ### ROOT as C/C++ macros
 
 Although all you code can be typed into the ROOT interpreter, it is more common the make '.C' macros to store your code. These can be run in ROOT by calling the script from the command line:
+
     root -l Gausian.C
 
 Or from an already opened interpreter session (.x means execute the script):
+
     root [0] .x Gausian.C
 
-Look at the example script which creates a histogram with a gaussian in it, and then fits the gaussian. 
+Look at the example script which creates a histogram, fills it with a randomly generated gaussian, and then fits the gaussian.
