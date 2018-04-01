@@ -1,4 +1,5 @@
 #include "TH1.h"
+#include "TF1.h"
 #include "TRandom3.h"
 #include "TCanvas.h"
 #include "TFile.h"
@@ -27,7 +28,7 @@ int main(int argc, char const *argv[]) {
   }
 
   // Create random generator
-  TRandom3 gen;
+  TRandom3 gen(rand());
 
   // Create histogram to fill
   TH1F *hist = new TH1F("hist", "Gaussian", 100, 0.0, 10.0);

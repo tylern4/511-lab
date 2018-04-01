@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from ROOT import TH1D, TCanvas, TF1
 from ROOT import gStyle
 from numpy.random import normal

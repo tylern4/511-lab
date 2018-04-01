@@ -11,7 +11,7 @@ void Gausian() {
   double sigma = 1.0;
   double thrw = 0;
   // Create random generator
-  TRandom3 gen;
+  TRandom3 gen(rand());
 
   // Create histogram to fill
   TH1F *hist = new TH1F("hist", "Gaussian", 100, 0.0, 10.0);

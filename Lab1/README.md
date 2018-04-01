@@ -45,3 +45,36 @@ Or from an already opened interpreter session (.x means execute the script):
     root [0] .x Gausian.C
 
 Look at the example script which creates a histogram, fills it with a randomly generated gaussian, and then fits the gaussian.
+
+### ROOT as a python module
+
+ROOT can also be used in python if it is built to support it, and installed properly. To check if it's working in your install:
+
+```python
+>>> import ROOT
+```
+
+Similarly you can use the python interpreter to program in but it is more common to use scripts like the Gausian.py example. This script does the same as the Gausian.C macro just in python. To run it:
+
+    python Gausian.py
+
+or
+
+    ./Gausian.py
+
+* * *
+
+## Task for today
+
+[ ] Get ROOT built/installed.
+[ ] Look over and run the C/C++/python example.
+[ ] Modify the code and see how changing num/mean/sigma changes the histogram and the fits.
+[ ] Change the random distribution and try to fit the new distribution.
+
+-   [ROOT](https://root.cern.ch/doc/master/classTRandom.html)
+-   [Python](https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html)
+-   [Fitting](https://root.cern.ch/root/html534/guides/users-guide/FittingHistograms.html)
+
+[ ] Plot your data from pervious labs, look at the advanced examples for how to input/load in data.
+[ ] Try to recreate the coin toss/dice roll experiments from pervious labs using random number generators.
+[ ] Fit the distributions using the appropriate functions.
