@@ -41,7 +41,7 @@ from the [ROOT] web page and extract the files if you like. First we will change
 
 Then we can download the source code using git.
 
-    sudo git clone --depth 1 <https://github.com/root-mirror/root.git>
+    sudo git clone --depth 1 https://github.com/root-mirror/root.git
 
 We used the `sudo` (super user do) command in order to install dependencies as well as to download into this folder.
 That is because unix systems like linux and OS X need different permissions to do different tasks or to

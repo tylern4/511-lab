@@ -66,15 +66,15 @@ or
 
 ## Task for today
 
-[ ] Get ROOT built/installed.
-[ ] Look over and run the C/C++/python example.
-[ ] Modify the code and see how changing num/mean/sigma changes the histogram and the fits.
-[ ] Change the random distribution and try to fit the new distribution.
+-   [ ] Get ROOT built/installed.
+-   [ ] Look over and run the C/C++/python example.
+-   [ ] Modify the code and see how changing num/mean/sigma changes the histogram and the fits.
+-   [ ] Change the random distribution and try to fit the new distribution.
 
 -   [ROOT](https://root.cern.ch/doc/master/classTRandom.html)
 -   [Python](https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html)
 -   [Fitting](https://root.cern.ch/root/html534/guides/users-guide/FittingHistograms.html)
 
-[ ] Plot your data from pervious labs, look at the advanced examples for how to input/load in data.
-[ ] Try to recreate the coin toss/dice roll experiments from pervious labs using random number generators.
-[ ] Fit the distributions using the appropriate functions.
+-   [ ] Plot your data from pervious labs, look at the advanced examples for how to input/load in data.
+-   [ ] Try to recreate the coin toss/dice roll experiments from pervious labs using random number generators.
+-   [ ] Fit the distributions using the appropriate functions.
