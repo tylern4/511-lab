@@ -33,7 +33,7 @@ void analyze() {
   Create the histograms you want to fill
   ****/
 
-  // Load chain from branch h10
+  // Load chain from branch lab
   TChain chain("lab");
   chain.Add(fin);
   TFile *OutputFile = new TFile(fout, "RECREATE");
