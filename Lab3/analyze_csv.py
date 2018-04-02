@@ -38,7 +38,7 @@ def analyze():
     e_mu_prime_3 = TVector3()
     e_mu_prime = TLorentzVector()
 
-    data = pd.read_csv(fin)
+    data = pd.read_csv(fin, sep=',')
 
     data['px'] = data['p'] * data['cx']
     data['py'] = data['p'] * data['cy']

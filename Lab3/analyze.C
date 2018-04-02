@@ -34,9 +34,9 @@ void analyze() {
   ****/
 
   // Load chain from branch lab
+  TFile *OutputFile = new TFile(fout, "RECREATE");
   TChain chain("lab");
   chain.Add(fin);
-  TFile *OutputFile = new TFile(fout, "RECREATE");
   double _p, _cx, _cy, _cz;
   chain.SetBranchAddress("p", &_p);
   chain.SetBranchAddress("cx", &_cx);

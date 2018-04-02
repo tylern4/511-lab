@@ -75,6 +75,5 @@ or
 -   [Python](https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html)
 -   [Fitting](https://root.cern.ch/root/html534/guides/users-guide/FittingHistograms.html)
 
--   [ ] Plot your data from pervious labs, look at the advanced examples for how to input/load in data.
--   [ ] Try to recreate the coin toss/dice roll experiments from pervious labs using random number generators.
--   [ ] Fit the distributions using the appropriate functions.
+-   [ ] Try to recreate the dice roll experiments from pervious labs using the random number generator.
+-   [ ] Plot your data from pervious lab, look at the convert_data_to_root.C for how to input/load in data.
