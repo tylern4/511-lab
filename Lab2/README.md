@@ -6,6 +6,8 @@ If we look at the Poisson distribution:
 
 ![Poisson]\(&lt;<https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}&space;=&space;\frac{\mu^&space;x}{x!}&space;e^{-\mu}>)
 
+We can see that the rate can be found if we fit a Poison to out histogram and use the known value of ∆t to get the value of r from μ.
+
 ## Task for today
 
 -   [ ] [Download Sr90 root Data](http://boson.physics.sc.edu/~gothe/511-S16/rootlab/PHYS511L-S16/Sr90-data.html)
