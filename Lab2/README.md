@@ -12,5 +12,10 @@ r is the detected-reaction rate and the mean number of events measured within th
 
 ## Task for today
 
--   [ ]
--   [ ] [Download Data](http://boson.physics.sc.edu/~gothe/511-S16/rootlab/PHYS511L-S16/Sr90-data.html)
+-   [ ] [Download Sr90 root Data](http://boson.physics.sc.edu/~gothe/511-S16/rootlab/PHYS511L-S16/Sr90-data.html)
+-   [ ] Plot data in histogram.
+-   [ ] Fit Poisson function to the data.
+-   [ ] Extract the detected event rate r.
+-   [ ] Plot r versus ∆t and determine whether the rate seems constant.
+-   [ ] Determine whether or not you can calculate the activity a for this sample of Sr-90 from r. Are they the same? How is a related to r?
+-   [ ] Investigate for which ∆t and T a Gaussian would work well for fitting the data and extracting the mean m and hence r. Use the χ2 statistic to justify your claims.
