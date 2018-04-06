@@ -4,11 +4,10 @@ In this lab we will use data collected from the Sr90 source used in the previous
 
 * * *
 
-![\large P(x;r\Delta t) = \frac{(r\Delta t) ^ x}{x!} e^{-r\Delta t}>]\(&lt;<https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}>)
+![Poisson](https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t})
 
 * * *
 
-\--
 r is the detected-reaction rate and the mean number of events measured within the time interval is given by r∆t = m.
 
 ## Task for today
