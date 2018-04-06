@@ -4,7 +4,7 @@ In this lab we will use data collected from the Sr90 source used in the previous
 
 If we look at the Poisson distribution:
 
-![Poisson]\(&lt;<https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}&space;=&space;\frac{\mu^&space;x}{x!}&space;e^{-\mu}>)
+![Poisson](https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}&space;=&space;\frac{\mu^&space;x}{x!}&space;e^{-\mu})
 
 We can see that the rate can be found if we fit a Poison to out histogram and use the known value of ∆t to get the value of r from μ.
 
