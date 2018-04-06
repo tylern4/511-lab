@@ -4,7 +4,7 @@ In this lab we will use data collected from the Sr90 source used in the previous
 
 If we look at the Poisson distribution:
 
-![Poisson](<https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}&space;=&space;\frac{\mu^&space;x}{x!}&space;e^{-\mu}" title="\large P(x;r\Delta t) = \frac{(r\Delta t) ^ x}{x!} e^{-r\Delta t} = \frac{\mu^ x}{x!} e^{-\mu}>)
+![Poisson]\(&lt;<https://latex.codecogs.com/png.latex?\large&space;P(x;r\Delta&space;t)&space;=&space;\frac{(r\Delta&space;t)&space;^&space;x}{x!}&space;e^{-r\Delta&space;t}&space;=&space;\frac{\mu^&space;x}{x!}&space;e^{-\mu}>)
 
 ## Task for today
 
