@@ -32,5 +32,7 @@ We can find the rate, r, if we fit a Poisson to the histograms to get a μ value
 ## Helpful Documentation
 
 [Fitting in ROOT](https://root.cern.ch/root/html534/guides/users-guide/FittingHistograms.html)
+
 [TF1](https://root.cern.ch/doc/v612/classTF1.html)
+
 [TGraph](https://root.cern.ch/doc/master/classTGraph.html)
