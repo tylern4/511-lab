@@ -6,9 +6,17 @@
 
 #define Square(x) ((x) * (x))
 
-static const double BEAM = 4.81726;  // Beam energy in GeV
-static const double MASS_P = 0.93827203;
-static const double MASS_E = 0.000511;
+static const double BEAM = 4.81726;       // Beam energy in GeV
+static const double MASS_P = 0.93827203;  // Mass in GeV
+static const double MASS_E = 0.000511;    // Mass in GeV
+
+/****
+TODO: Create a 4 vector for the Electron beam.
+TLorentzVector e_mu(???);
+
+TODO: Create a 4 vector for the Proton target.
+TLorentzVector p_mu(???);
+****/
 
 /****
 TODO: Write functions to calculate W and Q^2
@@ -22,12 +30,11 @@ TODO: Write functions to calculate W and Q^2
 //  P is proton target at rest
 //	Gotten from s channel [(gamma - P)^2 == s == w^2]
 
-
 ****/
 
 void analyze() {
-  const char *fin = "511_lab.root";
-  const char *fout = "output.root";
+  const char *fin = "511_lab_E_data_small.root";
+  const char *fout = "WvsQ2.root";
   /****
   TODO:
   Create the histograms you want to fill
@@ -37,14 +44,11 @@ void analyze() {
   TFile *OutputFile = new TFile(fout, "RECREATE");
   TChain chain("lab");
   chain.Add(fin);
-  double _p, _cx, _cy, _cz;
-  chain.SetBranchAddress("p", &_p);
-  chain.SetBranchAddress("cx", &_cx);
-  chain.SetBranchAddress("cy", &_cy);
-  chain.SetBranchAddress("cz", &_cz);
-
-  // Setup beam 4 vector
-  TLorentzVector e_mu(0.0, 0.0, TMath::Sqrt(Square(BEAM) - Square(MASS_E)), BEAM);
+  double e_p, e_cx, e_cy, e_cz;
+  chain.SetBranchAddress("p", &e_p);
+  chain.SetBranchAddress("cx", &e_cx);
+  chain.SetBranchAddress("cy", &e_cy);
+  chain.SetBranchAddress("cz", &e_cz);
 
   // Create 4 vectors for the scattered electron
   TVector3 e_mu_prime_3;
@@ -55,7 +59,7 @@ void analyze() {
     chain.GetEntry(current_event);
 
     // We setup the scattered electron by first setting the momentum 3 vector
-    e_mu_prime_3.SetXYZ(_p * _cx, _p * _cy, _p * _cz);
+    e_mu_prime_3.SetXYZ(e_p * e_cx, e_p * e_cy, e_p * e_cz);
     /*
       And then adding a mass to the 3 vector
       ROOT will calculate the proper energy for
@@ -78,6 +82,7 @@ void analyze() {
   /****
   TODO:
   Write the histograms into the file
+  hist->Write();
   ****/
   OutputFile->Close();
 }

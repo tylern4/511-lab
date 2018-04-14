@@ -7,6 +7,13 @@ import numpy as np
 
 # Follow the TODO portions to get the analysis working properly
 
+# TODO: Create a 4 vector for the Electron beam.
+# Setup beam 4 vector
+# e_mu = TLorentzVector(???)
+
+#      Create a 4 vector for the Proton target.
+# p_mu = TLorentzVector(???)
+
 # TODO: Write functions to calculate W and Q^2
 # Calcuating Q^2
 # q^mu^2 = (e^mu - e^mu')^2 = -Q^2
@@ -19,18 +26,14 @@ import numpy as np
 
 def analyze():
     BEAM = 4.81726  # Beam energy in GeV
-    MASS_P = 0.93827203
-    MASS_E = 0.000511
-    fin = "511_lab.root"
-    fout = "output.root"
+    MASS_P = 0.93827203  # Mass in GeV
+    MASS_E = 0.000511  # Mass in GeV
+    fin = "511_lab_E_data.root"
+    fout = "WvsQ2.root"
     # TODO: Create the histograms you want to fill
 
     # Load chain from branch lab
     OutputFile = TFile(fout, "RECREATE")
-
-    #Setup beam 4 vector
-    e_mu = TLorentzVector(0.0, 0.0, np.sqrt(BEAM * BEAM - MASS_E * MASS_E),
-                          BEAM)
 
     #Create 4 vectors for the scattered electron
     e_mu_prime_3 = TVector3()
@@ -49,13 +52,14 @@ def analyze():
         #  for reference
 
         e_mu_prime.SetVectM(e_mu_prime_3, MASS_E)
-        # print(e_mu_prime.E())
+        #print(e_mu_prime.E())
 
         #TODO: Calculate W and Q^2 using the functions you created above and fill the histograms.
 
     #end stuff
     OutputFile.cd()
     #TODO: Write the histograms into the file
+    #hist.Write()
     OutputFile.Close()
 
 
