@@ -20,7 +20,7 @@ This week we will look at calculating W and Q^2 values from the scattered electr
 
 ## Programming
 
--   [ ] [Download data](http://172.21.139.25:8000/)
+-   [ ] [Download data](http://boson.physics.sc.edu/~gothe/511-S18/rootlab/Data-S18/electron-scattering-data.html)
 -   [ ] Look at the C macro or python programs.
 -   [ ] Create a 4 vector for the Electron beam, e_mu.
 -   [ ] Create a 4 vector for the Proton target, p_mu.
