@@ -6,6 +6,8 @@ The root/csv file has the information from the scattered electron stored in 4 ba
 
 This week we will look at calculating W and Q^2 values from the scattered electrons.
 
+![reaction](reaction.png)
+
 ## Physics Calculations
 
 -   [ ] Write down the electron beam 4 vector.
