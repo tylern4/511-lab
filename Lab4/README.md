@@ -10,10 +10,6 @@ We will attempt to calculate the missing mass from the reactions which have a sc
 -   [ ] Write down the proton target 4 vector.
 -   [ ] Write down the scattered electron 4 vector.
 -   [ ] Write down the pi^+ 4 vector.
--   [ ] Determine how to get the invariant mass, W from your 4 vectors.
-    -   Hint: s channel.
--   [ ] Determine the energy transfer, Q^2.
-    -   Hint: t channel.
 -   [ ] Calculate the missing mass.
     -   Hint: Remember conservation of energy
 
@@ -22,16 +18,12 @@ We will attempt to calculate the missing mass from the reactions which have a sc
 -   [ ] Look at the C macro or python programs.
 -   [ ] Create a 4 vector for the Electron beam, e_mu.
 -   [ ] Create a 4 vector for the Proton target, p_mu.
--   [ ] Write a function to calculate W.
--   [ ] Write a function to calculate Q^2.
--   [ ] For each event calculate W and Q^2 and plot them in their histograms.
+-   [ ] Create a 4 vector for the scattered pion, pi_mu.
 
 ## Graphs
 
--   [ ] TH1D for W before missing mass
--   [ ] TH1D for Q^2 before missing mass
--   [ ] TH2D for W vs Q^2 before missing mass
--   [ ] TH1D for missing mass with a fit
--   [ ] TH1D for W after missing mass cut
--   [ ] TH1D for Q^2 after missing mass cut
--   [ ] TH2D for W vs Q^2 after missing mass cut
+-   [ ] TH1D for missing mass Calculations.
+
+## Questions
+
+-   [ ] What is the missing particle of the reaction?

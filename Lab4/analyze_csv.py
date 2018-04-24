@@ -9,28 +9,21 @@ import pandas as pd
 # Follow the TODO portions to get the analysis working properly
 
 # TODO: Create a 4 vector for the Electron beam.
-# Setup beam 4 vector
+#       Setup beam 4 vector
 # e_mu = TLorentzVector(???)
-
 #      Create a 4 vector for the Proton target.
 # p_mu = TLorentzVector(???)
 
-# TODO: Write functions to calculate W and Q^2
-# Calcuating Q^2
-# q^mu^2 = (e^mu - e^mu')^2 = -Q^2
-
-# Calcualting W
-# gamma = e^mu - e^mu'
-# P is proton target at rest
-# Gotten from s channel [(gamma - P)^2 == s == w^2]
+# TODO: Write a function to calculate Missing Mass
 
 
 def analyze():
     BEAM = 4.81726  # Beam energy in GeV
     MASS_P = 0.93827203  # Mass in GeV
     MASS_E = 0.000511  # Mass in GeV
-    fin = "511_lab_E_data.csv.gz"
-    fout = "WvsQ2.root"
+    MASS_PIP = 0.13957018  # Mass in GeV
+    fin = "511_lab_E_PIP_data.csv.gz"
+    fout = "MissingMass.root"
 
     # TODO: Create the histograms you want to fill
 
@@ -41,27 +34,28 @@ def analyze():
     e_mu_prime_3 = TVector3()
     e_mu_prime = TLorentzVector()
 
+    # TODO: Create 4 vectors for the scattered pion
+
     data = pd.read_csv(fin, sep=',')
 
-    data['px'] = data['p'] * data['cx']
-    data['py'] = data['p'] * data['cy']
-    data['pz'] = data['p'] * data['cz']
+    data['e_px'] = data['e_p'] * data['e_cx']
+    data['e_py'] = data['e_p'] * data['e_cy']
+    data['e_pz'] = data['e_p'] * data['e_cz']
 
     for event in data.itertuples():
-        # We setup the scattered electron by first setting the momentum 3 vector
-        e_mu_prime_3.SetXYZ(event.px, event.py, event.pz)
-        #  And then adding a mass to the 3 vector
-        #  ROOT will calculate the proper energy for
-        #  the 4 vector for us this way.
-        #  Check out (https://root.cern.ch/doc/master/classTLorentzVector.html)
-        #  for reference
+        e_mu_prime_3.SetXYZ(event.e_px, event.e_py, event.e_pz)
         e_mu_prime.SetVectM(e_mu_prime_3, MASS_E)
-        #print(e_mu_prime.E())
+        # print(e_mu_prime.E())
 
-        #TODO: Calculate W and Q^2 using the functions you created above and fill the histograms.
+        #TODO: Calculate missing mass using the functions you created above
+        # and fill the histogram.
 
     #end stuff
     OutputFile.cd()
+    # TODO:
+    # Fit the missing mass peak.
+    # Hint: Get everything else working first.
+    # Then try some of the fits we used in previous labs.
     #TODO: Write the histograms into the file
     #hist.Write()
     OutputFile.Close()
