@@ -96,6 +96,13 @@ import ROOT
 
 If there are no import errors then ROOT should work for any C/C++ or python project on your system.
 
+###### ROOT with docker
+
+```bash
+docker run -p 8888:8888 --rm -it -v $PWD:/home/user tylern4/rootv6:py3
+```
+
+
 [gnu compiler collection]: https://gcc.gnu.org
 
 [xcode]: https://developer.apple.com/xcode/
