@@ -1,6 +1,6 @@
+#include "TCanvas.h"
 #include "TH1.h"
 #include "TRandom3.h"
-#include "TCanvas.h"
 #include "TStyle.h"
 #include <iostream>
 
@@ -10,7 +10,7 @@ void Gausian() {
   double mean = 5.0;
   double sigma = 1.0;
   double thrw = 0;
-  // Create random generator
+  // Create a random generator
   TRandom3 gen(rand());
 
   // Create histogram to fill

@@ -1,13 +1,21 @@
-double poison(double *x, double *par) { return par[0] * TMath::Poisson(x[0], par[1]); }
+#include "TChain.h"
+#include "TF1.h"
+#include "TMath.h"
+#include "TROOT.h"
+#include "TTree.h"
+#include <string>
 
-void Sr90_ana() {
+double poison(double *x, double *par) {
+  return par[0] * TMath::Poisson(x[0], par[1]);
+}
+
+void Sr90_ana(std::string fin = "5ms_1000s.root") {
   gStyle->SetOptStat(111);
   gStyle->SetOptFit(111);
 
   // Input filename
-  const char *fin = "5ms_1000s.root";
   TChain *chain = new TChain("Sr90");
-  chain->Add(fin);
+  chain->Add(fin.c_str());
   // This creates a Poisson fitting function from the function created above
   TF1 *pois = new TF1("pois", poison, 0, 10, 2);
 
@@ -19,7 +27,7 @@ void Sr90_ana() {
   for (int current_event = 0; current_event < num_of_events; current_event++) {
     // Get current event and print out the event rate
     chain->GetEntry(current_event);
-    std::cout << "Count rate for event\t" << current_event << ":\t" << _x1 << std::endl;
+    std::cout << _x1 << std::endl;
   }
 
   chain->Reset();

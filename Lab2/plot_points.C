@@ -1,3 +1,6 @@
+#include "TGraph.h"
+#include "TROOT.h"
+
 double x[3] = {1.0, 2.0, 3.0};
 double y[3] = {3.0, 2.0, 3.5};
 

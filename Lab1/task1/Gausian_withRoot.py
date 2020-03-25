@@ -18,7 +18,7 @@ gStyle.SetOptFit(111)
 # Thrown a normal(gaussian) distobution using numpy
 throw = normal(loc=mean, scale=sigma, size=num)
 # Loop over the thrown event and fill in histogram
-#for t in throw:
+# for t in throw:
 #    hist.Fill(t)
 # Same as above but in one line
 [hist.Fill(t) for t in throw]
@@ -30,5 +30,5 @@ hist.Draw()
 # Fit gaussian to the histogram
 hist.Fit("gaus")
 
-#Do this so it leaves the graph on the screen
-raw_input("Press Enter to continue...")
+# Do this so it leaves the graph on the screen
+input("Press Enter to continue...")

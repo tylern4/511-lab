@@ -4,3 +4,6 @@
 Lab1/advanced/Gausian
 
 *.gz
+
+.vscode
+.ipynb_checkpoints
