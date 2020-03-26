@@ -1,9 +1,8 @@
 
 *.root
 
-Lab1/advanced/Gausian
-
 *.gz
 
+old
 .vscode
 .ipynb_checkpoints
