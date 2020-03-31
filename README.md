@@ -57,20 +57,12 @@ First make sure you have python3.5 or newer. If not just use [docker](#docker-in
 python --version
 ```
 
-To install the python packages make sure you have pip or conda working and that it's using python3. 
-
-```bash
-pip --version
-```
-
-or
-
-```bash
-conda --version
-```
-
-If it shows up with a python2 version and a warning try.
+To install the python packages make sure you have pip that it's using python3. 
 
 ```bash
 pip3 --version
+```
+
+```bash
+pip3 install jupyter matplotlib numpy scipy
 ```
