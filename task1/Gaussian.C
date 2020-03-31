@@ -4,7 +4,7 @@
 #include "TStyle.h"
 #include <iostream>
 
-void Gausian() {
+void Gaussian() {
   // Varibles for the gaussian
   int num = 100000;
   double mean = 5.0;
