@@ -64,5 +64,5 @@ pip3 --version
 ```
 
 ```bash
-pip3 install jupyter matplotlib numpy scipy
+pip3 install jupyter matplotlib numpy scipy pandas
 ```
