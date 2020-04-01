@@ -28,8 +28,15 @@ If that doesn't work, email me and I'll try to help you get started.
 If that works, great you're one more step to programming! Now run this command.
 
 I know this works on macOS/Linux I don't know on windows yet.
+
 ```bash
-docker run --rm -it -e USER="user" -p 9999:9999 -v $PWD:/home/user/data -w /home/user/data --entrypoint "jupyter" uofscphysics/root:v6_18_02 notebook --allow-root --ip=0.0.0.0 --port=9999;
+docker run --rm -it -e USER="user" -p 9999:9999 -v $PWD:/home/user/data -w /home/user/data --entrypoint "jupyter" uofscphysics/root:v6_18_02 notebook --allow-root --ip=0.0.0.0 --port=9999
+```
+
+For windows computers change USERNAME in "C:/Users/USERNAME" and run.
+
+```bash
+docker run --rm -it -p 9999:9999 -v C:/Users/USERNAME:/home/user/data -w /home/user/data --entrypoint "jupyter" uofscphysics/root:v6_18_02 notebook --allow-root --ip=0.0.0.0 --port=9999
 ```
 
 If you have macOS/Linux add this to your rc file to get make a useful function.
@@ -57,7 +64,7 @@ First make sure you have python3.5 or newer. If not just use [docker](#docker-in
 python --version
 ```
 
-To install packages.
+To install the required packages.
 
 ```bash
 pip3 install jupyter matplotlib numpy scipy pandas
